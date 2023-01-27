@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewData["Title"] = "New";
+}
+
+<h1>New Page</h1>
+
+<p>@{
+        foreach(var x in new List<int>(){1,1,1,13,754,2})
+        {
+        <div> Number: @x</div>
+        }
+    }
+</p>
