@@ -22,7 +22,33 @@ namespace DevicesMarket.Controllers
         {
             return View();
         }
-        public IActionResult New()
+
+        public IActionResult Main()
+        {
+            return View();
+        }
+
+        public IActionResult Contacts()
+        {
+            return View();
+        }
+
+        public IActionResult Delivery()
+        {
+            return View();
+        }
+
+        public IActionResult Partners()
+        {
+            return View();
+        }
+
+        public IActionResult Catalog()
+        {
+            return View();
+        }
+
+        public IActionResult Program()
         {
             return View();
         }
