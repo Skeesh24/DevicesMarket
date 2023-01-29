@@ -1,13 +1,13 @@
 ﻿<div id="header">
 
 	<!-- Logo -->
-	<h1><a href="index.html" id="logo">low price <em>Device Market</em></a></h1>
+	<h1><a href="/Home/index" id="logo">low price <em>Device Market</em></a></h1>
 
 	<!-- Nav -->
 	<nav id="nav">
 		<ul>
-			<li><a href="/Home/Index">Главная</a></li>
-			<li>
+			<li class="@ViewBag.Main"><a href="/Home/Main">Главная</a></li>
+			<li class="@ViewBag.Catalog">
 				<a href="/Home/Catalog">Каталог</a>
 				<ul>
 					<li><a href="#">Lorem dolor</a></li>
@@ -23,13 +23,13 @@
 							<li><a href="#">Veroeros feugiat</a></li>
 						</ul>
 					</li>
-					<li><a href="/Home/Contacts">Контакты feugiat</a></li>
+					<li class="@ViewBag.Contacts"><a href="/Home/Contacts">Контакты</a></li>
 				</ul>
 			</li>
-			<li><a href="/Home/Delivery">Доставка</a></li>
-			<li class="current"><a href="/Home/Index">Отзывы</a></li>
-			<li><a href="/Home/Program">Программа лояльности</a></li>
-			<li><a href="/Home/Partners">Наши партнеры</a></li>
+			<li class ="@ViewBag.Delivery"><a href="/Home/Delivery">Доставка</a></li>
+			<li class="@ViewBag.Index"><a href="/Home/Index">Отзывы</a></li>
+			<li class="@ViewBag.Program"><a href="/Home/Program">Программа лояльности</a></li>
+			<li class="@ViewBag.Partners"><a href="/Home/Partners">Наши партнеры</a></li>
 		</ul>
 	</nav>
 

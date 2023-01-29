@@ -15,6 +15,7 @@ namespace DevicesMarket.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.Index = "current";
             return View();
         }
 
@@ -25,31 +26,37 @@ namespace DevicesMarket.Controllers
 
         public IActionResult Main()
         {
+            ViewBag.Main = "current";
             return View();
         }
 
         public IActionResult Contacts()
         {
+            ViewBag.Contacts = "current";
             return View();
         }
 
         public IActionResult Delivery()
         {
+            ViewBag.Delivery = "current";
             return View();
         }
 
         public IActionResult Partners()
         {
+            ViewBag.Partners = "current";
             return View();
         }
 
         public IActionResult Catalog()
         {
+            ViewBag.Catalog = "current";
             return View();
         }
 
         public IActionResult Program()
         {
+            ViewBag.Program = "current";
             return View();
         }
 
