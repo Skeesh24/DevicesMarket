@@ -1,19 +1,27 @@
-﻿@{
+﻿
+@{
     Layout = "_Layout";
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Здесь будет список отзывов</p>
-    <button onclick="">Отзыв 1</button>
-    <button onclick="">Отзыв 2</button>
-    <button onclick="">Отзыв 3</button>
-    <button onclick="">Отзыв 4</button>
-    <button>Отзыв 5</button>
+
+    @if(RateViewModel.rates.Count > 0)
+    {
+        @foreach(var item in RateViewModel.rates)
+        {
+            <div id="darktext" style="background-color: lightgray; border-radius:15px; padding: 20px; margin-bottom: 20px">
+                <h3>Имя: @item.name</h3>
+                <h3>Почта: @item.email</h3>
+                <p>Текст: @item.message</p>
+            </div>
+        }
+    }
 </div>
 
 
-<div class="modal fade" id="modal" tabindex="-1">
+@*<div class="modal fade" id="modal" tabindex="-1">
     <div class="modal-dialog" style="">
         <div class="modal-content">
             <div class="modal-header">
@@ -32,4 +40,4 @@
             </div>
         </div>
     </div>
-</div>
+</div>*@

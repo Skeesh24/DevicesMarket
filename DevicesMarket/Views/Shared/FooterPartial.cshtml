@@ -1,4 +1,6 @@
-﻿<div id="footer">
+﻿@model RateViewModel
+
+<div id="footer">
 	<div class="container">
 		<div class="row">
 			<section class="col-3 col-6-narrower col-12-mobilep">
@@ -17,20 +19,20 @@
 			</section>
 			<section class="col-6 col-12-narrower">
 				<h3>Get In Touch</h3>
-				<form>
+				<form asp-controller="Home" asp-action="SendRate" method="post">
 					<div class="row gtr-50">
 						<div class="col-6 col-12-mobilep">
-							<input type="text" name="name" id="name" placeholder="Name" />
+							<input type="text" name="name" id="name" placeholder="Name" asp-for="name"/>
 						</div>
 						<div class="col-6 col-12-mobilep">
-							<input type="text" name="email" id="email" placeholder="Email" />
+							<input type="text" name="email" id="email" placeholder="Email" asp-for="email"/>
 						</div>
 						<div class="col-12">
-							<textarea name="message" id="message" placeholder="Message" rows="5"></textarea>
+							<textarea name="message" id="message" placeholder="Message" rows="5" asp-for="message"></textarea>
 						</div>
 						<div class="col-12">
 							<ul class="actions">
-								<li><input type="submit" class="button alt" value="Send Message" asp-controller="Home" asp-action="SendRate" /></li>
+								<li><input type="submit" class="button alt" value="Send Message" /></li>
 							</ul>
 						</div>
 					</div>

@@ -31,13 +31,13 @@ namespace DevicesMarket.Controllers
         public IActionResult Main(bool isAsp, string name)
         {
             ViewBag.Main = "current";
-            return View(new MainViewModel() { name = name, isAsp = isAsp });
+            return View(new MainViewModel { name = name, isAsp = isAsp });
         }
 
         public IActionResult Contacts()
         {
             ViewBag.Contacts = "current";
-            return View(new ContactsViewModel() { count = 2345});
+            return View(new ContactsViewModel { count = 2345});
         }
 
         public IActionResult Delivery()
@@ -74,6 +74,7 @@ namespace DevicesMarket.Controllers
         [HttpPost]
         public ActionResult SendRate(string name, string message, string email = "")
         {
+            RateViewModel.rates.Add(new RateViewModel(name, email, message));
             return RedirectToAction("Index");
         }
     }

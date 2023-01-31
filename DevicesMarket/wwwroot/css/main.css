@@ -2670,4 +2670,7 @@ button.small,
     padding: 2em 20px;
     text-align: left;
   }
+  #darktext{
+    background-color:aliceblue;
+  }
 }

@@ -2,7 +2,6 @@
 {
     public class RateViewModel
     {
-        private string message;
 
         public RateViewModel(string name, string email, string message)
         {
@@ -14,5 +13,9 @@
         public string name { get; set; }   
         
         public string email { get; set; }
+
+        public string message { get; set; }
+
+        public static List<RateViewModel> rates = new List<RateViewModel>();
     }
 }
