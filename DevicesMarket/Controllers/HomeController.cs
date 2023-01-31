@@ -1,6 +1,10 @@
-﻿using DevicesMarket.Models;
+﻿using DevicesMarket.Domain.Repositories.EntityFramework;
+using DevicesMarket.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using System.Net;
+using System.Security.Policy;
+using System.Text;
 
 namespace DevicesMarket.Controllers
 {
@@ -24,16 +28,16 @@ namespace DevicesMarket.Controllers
             return View();
         }
 
-        public IActionResult Main()
+        public IActionResult Main(bool isAsp, string name)
         {
             ViewBag.Main = "current";
-            return View();
+            return View(new MainViewModel() { name = name, isAsp = isAsp });
         }
 
         public IActionResult Contacts()
         {
             ViewBag.Contacts = "current";
-            return View();
+            return View(new ContactsViewModel() { count = 2345});
         }
 
         public IActionResult Delivery()
@@ -64,6 +68,13 @@ namespace DevicesMarket.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+
+        [HttpPost]
+        public ActionResult SendRate(string name, string message, string email = "")
+        {
+            return RedirectToAction("Index");
         }
     }
 }

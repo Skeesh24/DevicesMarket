@@ -5,9 +5,31 @@
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Здесь будет список отзывов</p>
-    <h3>Отзыв 1</h3>
-    <h3>Отзыв 2</h3>
-    <h3>Отзыв 3</h3>
-    <h3>Отзыв 4</h3>
-    <h3>Отзыв 5</h3>
+    <button onclick="">Отзыв 1</button>
+    <button onclick="">Отзыв 2</button>
+    <button onclick="">Отзыв 3</button>
+    <button onclick="">Отзыв 4</button>
+    <button>Отзыв 5</button>
+</div>
+
+
+<div class="modal fade" id="modal" tabindex="-1">
+    <div class="modal-dialog" style="">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">The name of window</div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-close btn-secondary" data-bs-dissmiss="modal">
+                        Close
+                    </button>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <a asp-controller="Car" asp-action="Delete" class="btn btn-danger">Delete</a>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

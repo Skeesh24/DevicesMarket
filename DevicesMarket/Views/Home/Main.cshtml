@@ -1,8 +1,27 @@
-﻿
+﻿@model MainViewModel
 @{
     Layout = "_Layout";
 }
 
 <p>
     Это главная страница приложения.
+
+    <h1>Приветствую, @Model.name</h1>
+
+    @if(Model.isAsp)
+    {
+        <img src="https://goo.su/DMEX" alt="is asp net core mvc picture" />
+    }
+
+    <ul>
+        <li>
+            Быстро
+        </li>
+        <li>
+            Удобно
+        </li>
+        <li>
+            Надежно
+        </li>
+    </ul>
 </p>

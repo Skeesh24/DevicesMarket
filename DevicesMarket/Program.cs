@@ -10,12 +10,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 
-// подключаем Функционал фрейма как сервисы
-//builder.Services.AddTransient<TextFieldsRepository>();
-//builder.Services.AddTransient<ProductsRepository>();
-//builder.Services.AddTransient<DataManager>();
-
 builder.Services.AddDbContext<AppDbContext>(x => x.UseSqlServer(Config.ConnectionStirng));
+
 builder.Services.AddIdentity<IdentityUser, IdentityRole>(opts =>
 {
     opts.User.RequireUniqueEmail = true;
@@ -58,6 +54,7 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}"
+);
 
 app.Run();

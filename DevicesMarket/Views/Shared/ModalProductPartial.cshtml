@@ -1,0 +1,30 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+
+<div class="row row-cols-1">
+    <div class="col" style="">
+        <div class="card">
+            @*<img />*@
+            <div class="card-body">
+                <h5>Name of card</h5>
+                <p class="card-text">some decription</p>
+            </div>
+            <ul class="list-group list-group-flash">
+                <li class="list-group-item">Price</li>
+                <li class="list-group-item">Model</li>
+            </ul>
+            <div class="card-body">
+                <button class="btn btn-primary" onclick="openModal({ url: ''})" >
+                </button>
+            </div>
+            @if (User.IsInRole("Admin"))
+            {
+                <a asp-controller="Car" asp-action="Delete" class="btn btn-danger">Delete</a>
+            }
+        </div>
+    </div>
+</div>
