@@ -2,7 +2,13 @@
 {
     public class ContactsViewModel
     {
-        public int? count { get; set; }
-        public bool ? isNotEmpty => count > 0;
+        public ContactsViewModel(int count)
+        {
+            this.count = count;
+        }
+
+        public int count { get; set; }
+
+        public bool isNotEmpty => count > 0;
     }
 }

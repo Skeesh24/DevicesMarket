@@ -37,7 +37,7 @@ namespace DevicesMarket.Controllers
         public IActionResult Contacts()
         {
             ViewBag.Contacts = "current";
-            return View(new ContactsViewModel { count = 2345});
+            return View();
         }
 
         public IActionResult Delivery()
